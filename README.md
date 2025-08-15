@@ -1,97 +1,198 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# React Native Coding Assignments
 
-# Getting Started
+A collection of beginner-to-intermediate **React Native** exercises designed to strengthen core concepts such as **state management**, **props**, **event handling**, **styling**, and **performance optimization**.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 📋 Assignments
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+### 1. Simple Counter App
+**Problem Statement**  
+Create a screen with:
+- A number displayed in the center.
+- Two buttons: **+** and **-**.
+- Tapping the buttons increments or decrements the count.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+**Concepts Practiced**  
+- `useState`  
+- Handling events  
+- Basic styling  
 
-```sh
-# Using npm
-npm start
+---
 
-# OR using Yarn
-yarn start
+### 2. Personalized Greeting Component
+**Problem Statement**  
+Build a `GreetingCard` component that:
+- Takes **name** and **message** as props.
+- Displays them inside a styled card.
+- Render 3 `GreetingCard` components with different props.
+
+**Concepts Practiced**  
+- Props  
+- Reusable components  
+- JSX  
+
+---
+
+### 3. Toggle Visibility
+**Problem Statement**  
+Create a button that toggles the visibility of a text block:
+- Button text alternates between “Show Details” and “Hide Details.”
+- When visible, show some sample description text.
+
+**Concepts Practiced**  
+- `useState`  
+- Conditional rendering  
+
+---
+
+### 4. Timer Component
+**Problem Statement**  
+Create a timer that:
+- Starts counting seconds when the component mounts.
+- Displays the elapsed time.
+- Stops counting when the component unmounts.
+
+**Concepts Practiced**  
+- `useEffect`  
+- Cleanup in `useEffect`  
+
+---
+
+### 5. Input Handling
+**Problem Statement**  
+Build a screen with:
+- A `TextInput` for entering a name.
+- A button to submit.
+- When submitted, display: **"Hello, [name]!"**
+
+**Concepts Practiced**  
+- `useState` for input  
+- Controlled components  
+
+---
+
+### 6. Todo List
+**Problem Statement**  
+Create a simple todo list:
+- `TextInput` to enter a todo item.
+- Button to add to the list.
+- Display the list below.
+- Each item should have a “Delete” button.
+
+**Concepts Practiced**  
+- `useState` with arrays  
+- Mapping over data  
+- Handling multiple actions  
+
+---
+
+### 7. Responsive Card Grid
+**Problem Statement**  
+Create a screen showing **6 cards** in a grid layout:
+- Each card has a title and description.
+- Cards wrap responsively based on screen width.
+
+**Concepts Practiced**  
+- Flexbox styling  
+- Arrays of styles  
+
+---
+
+### 8. Memoized Component
+**Problem Statement**  
+Build a parent component that:
+- Contains a counter and a text input.
+- Passes props to a child component that displays the text.
+- Uses `React.memo` to prevent the child from re-rendering when only the counter changes.
+
+**Concepts Practiced**  
+- `React.memo`  
+- Props comparison  
+- Performance optimization  
+
+---
+
+### 9. Custom Hook (`useFetch`)
+**Problem Statement**  
+Write a custom hook `useFetch` that:
+- Takes a URL.
+- Fetches data when mounted.
+- Returns `loading`, `data`, and `error`.
+
+**Usage Example**  
+Fetch and display users from:  
+`https://jsonplaceholder.typicode.com/users`
+
+**Concepts Practiced**  
+- Custom hooks  
+- `useEffect` for side effects  
+- API calls  
+
+---
+
+### 10. Dark Mode Toggle
+**Problem Statement**  
+Create a screen with:
+- A toggle switch to turn dark mode on/off.
+- Change background and text colors based on the toggle.
+
+**Concepts Practiced**  
+- `useState`  
+- Dynamic styles  
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) installed
+- [React Native CLI](https://reactnative.dev/docs/environment-setup) or Expo installed
+- Android Studio or Xcode set up for mobile development
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/your-username/react-native-coding-assignments.git
+
+# Navigate to project folder
+cd react-native-coding-assignments
+
+# Install dependencies
+npm install
+# or
+yarn install
 ```
 
-## Step 2: Build and run your app
+### Running the App
+```bash
+# For iOS
+npx react-native run-ios
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+# For Android
+npx react-native run-android
 ```
 
-### iOS
+---
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+## 🛠 Tech Stack
+- **React Native** – Mobile UI framework
+- **JavaScript (ES6+)** – Language
+- **Expo** *(optional)* – Simplified development environment
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+---
 
-```sh
-bundle install
-```
+## 📚 Learning Outcomes
+By completing these assignments, you'll gain experience in:
+- Component creation and composition
+- State and props handling
+- Event binding
+- Side effects and cleanup
+- Styling with Flexbox
+- API integration
+- Performance optimization with memoization
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## 📄 License
+This project is open-source and available under the [MIT License](LICENSE).
