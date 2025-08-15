@@ -1,0 +1,10 @@
+export const SimpleCounter = 'SimpleCounter';
+export const ResponsiveCardGrid = 'ResponsiveCardGrid';
+export const Timer = 'Timer';
+export const InputHandling = 'InputHandling';
+export const ToggleScreen = 'ToggleScreen';
+export const PersonalizedGreeting = 'PersonalizedGreeting';
+export const TodoList = 'TodoList';
+export const Memoized = 'Memoized';
+export const CustomHooks = 'CustomHooks';
+export const DarkMode = 'DarkMode';
